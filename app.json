@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/book/index",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "bold",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "甄选书屋",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "color": "#999",
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "text": "书城",
+        "pagePath": "pages/book/index",
+        "iconPath": "images/book.png",
+        "selectedIconPath": "images/book_selected.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_selected.png"
+      }
+    ]
+  }
+}

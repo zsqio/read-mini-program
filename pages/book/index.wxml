@@ -1,0 +1,25 @@
+<view class="page-container">
+    <!-- 头部banner -->
+    <view class="swiper-wrapper">
+        <swiper indicator-dots="{{indicatorDots}}"
+                autoplay="{{autoplay}}"
+                interval="{{interval}}"
+                duration="{{duration}}"
+                indicator-active-color="white">
+            <block wx:for="{{bannerList}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 导航tab -->
+    <view class="tab-container">
+        <view class="tab-item {{activeIndex !== 2 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
+            所有书籍
+        </view>
+        <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
+            阅览排行
+        </view>
+    </view>
+</view>
