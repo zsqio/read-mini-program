@@ -14,12 +14,30 @@
         </swiper>
     </view>
     <!-- 导航tab -->
-    <view class="tab-container">
+    <view class="tab-wrapper">
         <view class="tab-item {{activeIndex !== 2 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
             所有书籍
         </view>
         <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
             阅览排行
         </view>
+    </view>
+    <!-- 书籍列表 -->
+    <view class="book-wrapper">
+        <block wx:for="{{bookList}}">
+            <view class="book-item">
+                <view class="item-image">
+                    <image src="{{item.imgUrl}}" />
+                </view>
+                <view class="item-icon">
+                    <image src="{{item.iconUrl}}"/>
+                </view>
+                <view class="item-desc">
+                    <text class="title">{{item.title}}</text>
+                    <text class="subTitle">{{item.subTitle}}</text>
+                </view>
+                <view class="item-price">¥{{item.price}}</view>
+            </view>
+        </block>
     </view>
 </view>
