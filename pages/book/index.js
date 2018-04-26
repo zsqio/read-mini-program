@@ -34,7 +34,33 @@ Page({
                 subTitle: '首次了解诚品时光，绝不只是一家书店',
                 price: 56,
             },
-        ]
+        ],
+        rankList: [
+            {
+                coverUrl: '../../images/cover/1.jpg',
+                title:'追风筝的人',
+                engTitle:'The Kite Runner',
+                author: '[美] 卡勒德·胡赛尼 / 李继宏 / 上海人民出版社 / 2006-5 / 29.00元',
+                desc: '“为你，千千万万遍”',
+                score: 8.9,
+            },
+            {
+                coverUrl: '../../images/cover/2.jpg',
+                title:'小王子',
+                engTitle:'The Kite Runner',
+                author: '[法] 圣埃克苏佩里 / 马振聘 / 人民文学出版社 / 2003-8 / 22.00元',
+                desc: '“送给小朋友”',
+                score: 9.0,
+            },
+            {
+                coverUrl: '../../images/cover/3.jpg',
+                title:'围城',
+                author: '钱锺书 / 人民文学出版社 / 1991-2 / 19.00',
+                desc: '“对于“人艰不拆”四个字最彻底的违抗”',
+                score: 8.9,
+            },
+        ],
+        activeIndex: 1,
     },
     onLoad() {
         console.log('onLoad')

@@ -15,15 +15,15 @@
     </view>
     <!-- 导航tab -->
     <view class="tab-wrapper">
-        <view class="tab-item {{activeIndex !== 2 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
+        <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
             所有书籍
         </view>
         <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
             阅览排行
         </view>
     </view>
-    <!-- 书籍列表 -->
-    <view class="book-wrapper">
+    <!-- 书籍list -->
+    <view class="book-wrapper {{activeIndex === 1 ? 'show' : 'hidden'}}">
         <block wx:for="{{bookList}}">
             <view class="book-item">
                 <view class="item-image">
@@ -38,6 +38,27 @@
                 </view>
                 <view class="item-price">¥{{item.price}}</view>
             </view>
+        </block>
+    </view>
+    <!-- 书籍排行 -->
+    <view class="rank-wrapper {{activeIndex === 2 ? 'show' : 'hidden'}}">
+        <block wx:for="{{rankList}}">
+            <view class="rank-item">
+                <view class="item-index"></view>
+                <text class="index">{{index+1}}</text>
+                <view class="item-cover">
+                    <image src="{{item.coverUrl}}"/>
+                </view>
+                <view class="item-info">
+                    <text class="title">{{item.title}}</text>
+                    <text class="engTitle">{{item.engTitle}}</text>
+                    <text class="author">{{item.author}}</text>
+                    <text class="score">{{item.score}}</text>
+                    <text class="desc">{{item.desc}}</text>
+
+                </view>
+            </view>
+
         </block>
     </view>
 </view>
