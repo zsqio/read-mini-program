@@ -9,3 +9,29 @@ image {
   width: 100%;
   height: 100%;
 }
+/**公共tab样式**/
+.tab-wrapper {
+  display: flex;
+  padding: 20rpx 0 0;
+  margin: 20rpx 0;
+  background: #fff;
+}
+
+.tab-item {
+  flex: 1;
+  font-size: 32rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 6rpx solid #1afa29;
+}
+
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+}

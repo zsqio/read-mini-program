@@ -25,7 +25,7 @@
     <!-- 书籍list -->
     <view class="book-wrapper {{activeIndex === 1 ? 'show' : 'hidden'}}">
         <block wx:for="{{bookList}}">
-            <view class="book-item">
+            <view class="book-item"  bindtap="goDetail">
                 <view class="item-image">
                     <image src="{{item.imgUrl}}" />
                 </view>
@@ -42,7 +42,7 @@
     </view>
     <!-- 书籍排行 -->
     <view class="rank-wrapper {{activeIndex === 2 ? 'show' : 'hidden'}}">
-        <block wx:for="{{rankList}}">
+        <block wx:for="{{rankList}}" >
             <view class="rank-item">
                 <view class="item-index"></view>
                 <text class="index">{{index+1}}</text>

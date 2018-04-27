@@ -4,24 +4,6 @@
 .swiper-item {
   width: 100%;
 }
-.tab-wrapper {
-  display: flex;
-  padding: 20rpx 0 0;
-  margin: 20rpx 0;
-  background: #fff;
-}
-
-.tab-item {
-  flex: 1;
-  font-size: 32rpx;
-  text-align: center;
-  padding: 10rpx 0;
-}
-
-.active {
-  font-weight: bold;
-  border-bottom: 6rpx solid #1afa29;
-}
 
 .book-wrapper {
   width: 100%;
@@ -72,12 +54,7 @@
   padding: 4rpx 16rpx 4rpx 10rpx;
   font-weight: 400;
 }
-.show {
-  display: block;
-}
-.hidden {
-  display: none;
-}
+
 .rank-wrapper {
   width: 100%;
   padding: 0 20rpx;

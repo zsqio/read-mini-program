@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/book/index",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/bookDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "bold",

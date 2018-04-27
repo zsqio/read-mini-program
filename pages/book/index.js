@@ -75,5 +75,10 @@ Page({
     },
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
+    },
+    goDetail() {
+        wx.navigateTo({
+            url:'../bookDetail/index?id=1'
+        })
     }
 })
