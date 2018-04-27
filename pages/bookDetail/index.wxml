@@ -56,7 +56,7 @@
             </view>
         </view>
         <view class="comment-content {{activeIndex === 3 ? 'show' : 'hidden'}}">
-            <view class="comment-count">总共{{commentList.length}}条评论</view>
+            <view class="comment-count">共{{commentList.length}}条短评</view>
             <block wx:for="{{commentList}}">
                 <view class="comment-item">
                     <view class="item-avatar">
