@@ -8,13 +8,15 @@
   <view class="list-wrapper">
     <view class="list-item">
       <text class="item-name">
-        我的订单
+        个人信息
       </text>
+      <text class="item-right"></text>
     </view>
     <view class="list-item">
       <text class="item-name">
-        
+        心愿单
       </text>
+      <text class="item-right"></text>
     </view>
   </view>
 </view>

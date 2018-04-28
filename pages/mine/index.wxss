@@ -17,6 +17,32 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
+.list-wrapper {
+  margin-top: 20rpx;
+}
+.list-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+}
+.list-item .item-name{
+  flex: 1;
+  color: #333;
+  font-size: 32rpx;
+}
+.item-right:after{
+  content: '';
+  display:inline-block;
+  width: 6px;
+  height: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  transform: rotate(45deg);
+  margin-right:10px;
+  top: -1px;
+  position: relative;
 }
