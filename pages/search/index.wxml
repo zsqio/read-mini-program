@@ -1,0 +1,21 @@
+<view class="page-container">
+    <!-- 头部搜索 -->
+    <view class="search-box">
+        <input type='text' placeholder='输入书名' placeholder-style='color: #000;' bindinput='bindKeyInput' value="{{searchKey}}" />
+        <icon wx:if='{{searchKey}}' type="cancel" size='15' bindtap='resetList' />
+        <icon type="search" size="15" bindtap='search' />
+    </view>
+
+    <!-- 搜索提示 -->
+    <view class="inform-box">
+        <view class="inform-logo">
+            <image src="{{informImg}}" />
+        </view>
+        <view class="inform-text">{{informText}}</view>
+    </view>
+
+    <!-- 搜索结果展示区域 -->
+    <view class="search-result">
+
+    </view>
+</view>

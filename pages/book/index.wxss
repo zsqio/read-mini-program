@@ -4,7 +4,19 @@
 .swiper-item {
   width: 100%;
 }
-
+.search-placeholder {
+  position: absolute;
+  z-index: 2;
+  right: 20rpx;
+  top: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .5);
+}
+.search-placeholder icon {
+  margin: 20rpx 20rpx;
+}
 .book-wrapper {
   width: 100%;
   padding: 0 20rpx;

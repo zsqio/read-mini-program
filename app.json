@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/book/index",
-    "pages/index/index",
-    "pages/bookDetail/index"
+    "pages/mine/index",
+    "pages/bookDetail/index",
+    "pages/search/index"
   ],
   "window": {
     "backgroundTextStyle": "bold",
@@ -23,7 +24,7 @@
       },
       {
         "text": "我的",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/mine/index",
         "iconPath": "images/user.png",
         "selectedIconPath": "images/user_selected.png"
       }

@@ -1,0 +1,40 @@
+.page-container {
+    padding: 20rpx;
+    box-sizing: border-box;
+    background: #fff;
+}
+.search-box {
+    display: flex;
+    margin-bottom: 20rpx;
+    padding: 10rpx 20rpx;
+    font-size: 28rpx;
+    border-radius: 20rpx;
+    border: 4rpx solid #1afa29;
+    background: #fff;
+}
+
+.search-box input {
+    flex: 1;
+    font-size: 26rpx;
+}
+
+.search-box icon {
+    padding: 10rpx;
+}
+.inform-box {
+    margin-top: 200rpx;
+}
+.inform-box .inform-logo {
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    background-size: cover;
+}
+.inform-box .inform-text {
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}

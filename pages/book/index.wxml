@@ -13,6 +13,9 @@
             </block>
         </swiper>
     </view>
+    <view class="search-placeholder" bindtap="goSearch">
+        <icon type="search" color="#1afa29" size="18"></icon>
+    </view>
     <!-- 导航tab -->
     <view class="tab-wrapper">
         <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">

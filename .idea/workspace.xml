@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f936be00-190f-4c74-8339-6a77ddd4fb43" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/bookDetail/index.wxml" afterPath="$PROJECT_DIR$/pages/bookDetail/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.json" afterPath="$PROJECT_DIR$/app.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/book/index.js" afterPath="$PROJECT_DIR$/pages/book/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/book/index.wxml" afterPath="$PROJECT_DIR$/pages/book/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/book/index.wxss" afterPath="$PROJECT_DIR$/pages/book/index.wxss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/bookDetail/index.js" afterPath="$PROJECT_DIR$/pages/bookDetail/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +27,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/book/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+            <state relative-caret-position="286">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
                 <element signature="e#58#304#0" expanded="false" />
                 <element signature="e#425#1172#0" expanded="false" />
@@ -36,12 +41,13 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+            <state relative-caret-position="220">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <element signature="e#58#974#0" expanded="false" />
                 <element signature="e#994#1552#0" expanded="false" />
                 <element signature="e#1575#1749#0" expanded="false" />
+                <element signature="e#1772#2659#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -50,18 +56,18 @@
       <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="201">
               <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="22">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding>
                 <element signature="n#view#0;n#view#3;n#view#0;n#!!top" expanded="false" />
                 <element signature="n#view#1;n#view#3;n#view#0;n#!!top" expanded="false" />
@@ -70,21 +76,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/book/index.wxss">
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/search/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.json">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/search/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="132">
+              <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1524899652899" expanded="true" signature="54:154" ph="{&quot;informImg&quot;: '../../images/happy.png'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/search/index.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/book/index.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,19 +122,21 @@
       <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/book/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logs.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/logs/logs.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="616">
+              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+              <folding>
+                <marker date="1524896493154" expanded="true" signature="1086:1724" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1124:1712" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1181:1695" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1223:1299" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1340:1416" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1457:1611" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1816:2547" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1854:2535" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="1892:2517" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="2038:2115" ph="..." />
+                <marker date="1524896493154" expanded="true" signature="2156:2497" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +144,7 @@
       <file leaf-file-name="app.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
+            <state relative-caret-position="792">
               <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
@@ -129,13 +160,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app.json" />
-        <option value="$PROJECT_DIR$/pages/book/index.js" />
         <option value="$PROJECT_DIR$/pages/book/index.wxml" />
         <option value="$PROJECT_DIR$/pages/book/index.wxss" />
         <option value="$PROJECT_DIR$/app.wxss" />
-        <option value="$PROJECT_DIR$/pages/bookDetail/index.js" />
         <option value="$PROJECT_DIR$/pages/bookDetail/index.wxss" />
         <option value="$PROJECT_DIR$/pages/bookDetail/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/book/index.js" />
+        <option value="$PROJECT_DIR$/pages/bookDetail/index.js" />
+        <option value="$PROJECT_DIR$/pages/search/index.wxss" />
+        <option value="$PROJECT_DIR$/pages/search/index.js" />
+        <option value="$PROJECT_DIR$/pages/search/index.wxml" />
       </list>
     </option>
   </component>
@@ -174,8 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,16 +232,24 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="bookDetail" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="read-mini-program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="read-mini-program" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/workspace/littleDiary" />
+    <property name="last_opened_file_path" value="F:/cloud-library" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -242,12 +282,13 @@
       <workItem from="1524217273522" duration="72000" />
       <workItem from="1524631750308" duration="16155000" />
       <workItem from="1524663094219" duration="605000" />
-      <workItem from="1524717029645" duration="19889000" />
+      <workItem from="1524717029645" duration="20742000" />
+      <workItem from="1524894315104" duration="3352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36721000" />
+    <option name="totallyTimeSpent" value="40926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -260,7 +301,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5054096" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5054096" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -282,6 +323,102 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pages/book/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#58#304#0" expanded="false" />
+            <element signature="e#425#1172#0" expanded="false" />
+            <element signature="e#1192#2029#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="83" column="23" lean-forward="true" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+          <folding>
+            <element signature="e#58#974#0" expanded="false" />
+            <element signature="e#994#1552#0" expanded="false" />
+            <element signature="e#1575#1749#0" expanded="false" />
+            <element signature="e#1772#2659#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="n#view#0;n#view#3;n#view#0;n#!!top" expanded="false" />
+            <element signature="n#view#1;n#view#3;n#view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/book/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/book/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="71" />
+          <folding>
+            <marker date="1524896493154" expanded="true" signature="1086:1724" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1124:1712" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1181:1695" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1223:1299" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1340:1416" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1457:1611" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1816:2547" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1854:2535" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1892:2517" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2038:2115" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2156:2497" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/logs/logs.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -318,7 +455,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1524896493154" expanded="true" signature="1086:1724" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1124:1712" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1181:1695" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1223:1299" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1340:1416" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1457:1611" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1816:2547" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1854:2535" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1892:2517" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2038:2115" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2156:2497" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -386,7 +535,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="40" column="16" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1524896493154" expanded="true" signature="1086:1724" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1124:1712" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1181:1695" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1223:1299" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1340:1416" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1457:1611" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1816:2547" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1854:2535" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1892:2517" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2038:2115" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2156:2497" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -442,18 +603,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
+    <entry file="file://$PROJECT_DIR$/app.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="792">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/book/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <marker date="1524896493154" expanded="true" signature="1086:1724" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1124:1712" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1181:1695" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1223:1299" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1340:1416" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1457:1611" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1816:2547" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1854:2535" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="1892:2517" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2038:2115" ph="..." />
+            <marker date="1524896493154" expanded="true" signature="2156:2497" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/book/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+        <state relative-caret-position="286">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="e#58#304#0" expanded="false" />
             <element signature="e#425#1172#0" expanded="false" />
@@ -462,58 +643,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/book/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/book/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        <state relative-caret-position="220">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <element signature="e#58#974#0" expanded="false" />
             <element signature="e#994#1552#0" expanded="false" />
             <element signature="e#1575#1749#0" expanded="false" />
+            <element signature="e#1772#2659#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="201">
           <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/book/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/bookDetail/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="22">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
             <element signature="n#view#0;n#view#3;n#view#0;n#!!top" expanded="false" />
             <element signature="n#view#1;n#view#3;n#view#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/search/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/search/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1524899652899" expanded="true" signature="54:154" ph="{&quot;informImg&quot;: '../../images/happy.png'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/search/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
