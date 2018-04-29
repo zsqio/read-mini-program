@@ -1,1 +1,17 @@
-<view class="page-container"></view>
+<view class="page-container">
+<!-- 标签列表 -->
+    <block wx:for="{{tagArray}}">  
+        <view class="tags-box">
+            <text class="ibox-title">{{item.title}}:</text>
+            <view class="list-container">
+                <view class="list-ui">  
+                    <block wx:for="{{item.tags}}">
+                        <navigator class="tags-nav"  url="">
+                            <text class="tag">{{item}}</text>
+                        </navigator>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
