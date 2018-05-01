@@ -7,7 +7,8 @@ Page({
       informImg: '../../images/happy.png',
       informText: '请输入您要查找的书名~',
       searchKey:'',
-      bookList: [],
+      searchResult: {},
+      hasData: false,
   },
   onLoad: function () {
 
@@ -26,29 +27,35 @@ Page({
             title: 'loading',
         })
         wx.request({
-            url: 'http://localhost:8888/book/list',
+            url: 'http://192.168.1.104:9999/book/list',
+            method:'get',
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
             data: {
-                status: 0,
-                title: _this.data.searchKey
+                name: _this.data.searchKey
             },
             success(res) {
-                if (res.data.result) {
+                if (res.data.data.length) {
+                    
                     const data = res.data.data
-                    data.forEach(item => {
-                        item.record_date = date.formatTime(item.record_date).substring(0, 10)
-                    })
+                    console.log(data)
                     _this.setData({
-                        bookList: data
+                        searchResult: data[0],
+                        hasData: true
                     })
                 } else {
-                    
+                    _this.setData({
+                        informImg: '../../images/unhappy.png',
+                        informText: '非常抱歉,没有找到您想要的书籍,管理员会及时上架最新资源哦！'
+                    })
                 }
             },
             fail() {
                 _this.setData({
-                        informImg: '../../images/unhappy.png',
-                        informText: '非常抱歉,没有找到您想要的书籍,管理员会及时上架最新资源哦！'
-                    })
+                    informImg: '../../images/unhappy.png',
+                    informText: '非常抱歉,没有找到您想要的书籍,管理员会及时上架最新资源哦！'
+                })
             },
             complete() {
                 wx.hideLoading()

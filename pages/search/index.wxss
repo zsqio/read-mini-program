@@ -38,3 +38,39 @@
     padding: 0 40rpx;
     box-sizing: border-box;
 }
+.search-result {
+    display: flex;
+}
+.search-result .result-cover {
+  width: 180rpx;
+  height: 240rpx;
+  margin-right: 20rpx;
+}
+.search-result .result-info {
+  flex: 1;
+}
+.result-info text {
+  display: block;
+  margin-bottom: 10rpx;
+}
+.search-result .title {
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.search-result .engTitle {
+  color: #666666;
+  font-size: 28rpx;
+}
+.search-result .author {
+  color: #333333;
+  font-size: 28rpx;
+}
+.search-result .score {
+  color: #e09015;
+  font-size: 24rpx;
+}
+.search-result .desc {
+  color: #666666;
+  font-size: 28rpx;
+}

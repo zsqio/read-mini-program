@@ -96,3 +96,19 @@
   color: #666666;
   font-size: 28rpx;
 }
+
+.operate-wrapper {
+  position: fixed;
+  bottom: 40rpx;
+  right: 5%;
+  z-index: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 8rpx;
+
+}
+.like-box {
+  width: 80rpx;
+  height: 80rpx;
+}

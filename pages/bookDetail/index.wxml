@@ -71,4 +71,10 @@
             </block>
         </view>
     </view>
+
+    <view class="operate-wrapper">
+        <view class="like-box" bindtap="like">
+            <image src="{{likeImg}}"></image>
+        </view>
+    </view>
 </view>

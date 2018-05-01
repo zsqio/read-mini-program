@@ -4,7 +4,8 @@
     "pages/mine/index",
     "pages/sort/index",
     "pages/bookDetail/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/list/index"
   ],
   "window": {
     "backgroundTextStyle": "bold",

@@ -82,11 +82,46 @@ Page({
 
         ],
         activeIndex: 1,
+        likeStatus: false,
+        likeImg: '../../images/tobeliked.png',
     },
     onLoad() {
 
     },
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
+    },
+    like() {
+        let self = this;
+        self.setData(
+            {
+                likeStatus: !self.data.likeStatus
+            }
+        ) 
+        if(self.data.likeStatus) {
+            self.setData(
+                {
+                    likeImg: '../../images/liked.png'
+                }
+            )
+            wx.showToast({
+                title: '已收藏',
+                icon: 'success',
+                duration: 2000
+            })
+        } else {            
+            self.setData(
+                {
+                    likeImg: '../../images/tobeliked.png'
+                }
+            )
+            wx.showToast({
+                title: '已取消收藏',
+                icon: 'success',
+                duration: 2000
+            })
+        }
+        
+        
     }
 })
