@@ -16,15 +16,13 @@
     box-sizing: border-box;
     border-bottom: 1px dashed #666;
 }
-.tags-box .tags-nav{
-     display: inline-block;
-     margin-right: 24rpx;
-     margin-bottom: 24rpx;
-     background-color: #fff;
-     color: #666;
-     border-radius: 16rpx;
-}
+
 .tags-box .tag{
+    margin-right: 24rpx;
+    margin-bottom: 24rpx;
+    background-color: #fff;
+    color: #666;
+    border-radius: 16rpx;
     display: inline-block;   
     font-size: 28rpx;  
     padding: 20rpx 30rpx;

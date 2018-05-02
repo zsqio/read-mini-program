@@ -17,120 +17,99 @@
 .search-placeholder icon {
   margin: 20rpx 20rpx;
 }
+
+
 .book-wrapper {
   width: 100%;
   padding: 0 20rpx;
   box-sizing: border-box;
 }
-.book-item {
-  position: relative;
-  margin-bottom: 20rpx;
-}
-.book-item .item-icon {
-  position: absolute;
-  z-index: 2;
-  left: 40rpx;
-  bottom: 20rpx;
-  width: 160rpx;
-  height: 220rpx;
-}
-.book-item .item-desc {
-  width: 100%;
-  background: #fff;
-  padding: 20rpx 100rpx 20rpx 280rpx;
-  box-sizing: border-box;
-}
-.book-item .title {
-  font-size: 32rpx;
-  color: #333333;
-  font-weight: 600;
-  display: block;
-}
-.book-item .subTitle {
-  font-size: 28rpx;
-  color: #666666;
-}
-.book-item .item-image {
-  height: 240rpx;
-}
-.book-item .item-price {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  top: 190rpx;
-  transform: translateY(50%);
-  background-color: #e76648;
-  color: #fff;
-  font-size: 32rpx;
-  line-height: 44rpx;
-  padding: 4rpx 16rpx 4rpx 10rpx;
-  font-weight: 400;
-}
-
-.rank-wrapper {
-  width: 100%;
-  padding: 0 20rpx;
-  box-sizing: border-box;
-}
-.rank-wrapper .rank-item {
+.book-wrapper .book-item {
   background: #fff;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-bottom: 20rpx;
   padding: 20rpx;
 }
-.rank-item .item-cover {
+.book-item .item-cover {
   width: 180rpx;
   height: 240rpx;
   margin-right: 20rpx;
 }
-.rank-item .item-index {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-width: 30rpx;
-  border-style: solid;
-  border-color: #e09015 transparent transparent #e09015;
-}
-.rank-item .index {
-  position: absolute;
-  top: 0;
-  left: 5rpx;
-  color: #ffffff;
-  font-size: 28rpx;
-  font-weight: 600;
-
-}
-.rank-item .item-info {
+.book-item .item-info {
   flex: 1;
 }
 .item-info text {
   display: block;
   margin-bottom: 10rpx;
 }
-.rank-item .title {
+.book-item .title {
   color: #333333;
   font-size: 32rpx;
   font-weight: 600;
 }
-.rank-item .engTitle {
+.book-item .engTitle {
   color: #666666;
   font-size: 28rpx;
 }
-.rank-item .author {
+.book-item .author {
   color: #333333;
   font-size: 28rpx;
 }
-.rank-item .score {
+.book-item .publisher {
+  color: #333333;
+  font-size: 28rpx;
+}
+.book-item .score {
   color: #e09015;
   font-size: 24rpx;
 }
-.rank-item .desc {
+.book-item .desc {
   color: #666666;
   font-size: 28rpx;
 }
 
+.hobby-wrapper {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.change-box {
+  text-align: right;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+.change-box .change-btn {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.change-box .change-text {
+  font-size: 28rpx;
+  color: #666;
+  vertical-align: middle;
+}
+.hobby-content {
+  width: 100%;
+  margin-top: 40rpx;
+}
+.hobby-content .hobby-item {
+  width: 33.33%;
+  display: inline-block;
+  margin-bottom: 20rpx;
+}
+.hobby-item .item-image{
+  width: 160rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+}
+.hobby-item .item-name {
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}

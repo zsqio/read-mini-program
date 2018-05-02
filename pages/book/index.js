@@ -12,30 +12,33 @@ Page({
         autoplay: true,
         interval: 5000,
         duration: 1000,
-        bookList: [
+        hobbyList: [
             {
-                imgUrl:'../../images/banner/banner3.jpg',
-                iconUrl:'../../images/bookIcon/ding.jpg',
-                title:'丁丁历险记',
-                subTitle: '跟着丁丁去历险',
-                price: 89,
+                image:'https://img1.doubanio.com/view/subject/l/public/s2659208.jpg',
+                name:'月亮和六便士',
             },
             {
-                imgUrl:'../../images/banner/banner4.jpg',
-                iconUrl:'../../images/bookIcon/pig.jpg',
-                title:'小猪佩奇故事书系列',
-                subTitle: '二十册佩奇故事书画册',
-                price: 126,
+                image:'https://img1.doubanio.com/view/subject/l/public/s3984108.jpg',
+                name:'目送',
             },
             {
-                imgUrl:'../../images/banner/banner2.jpg',
-                iconUrl:'../../images/bookIcon/time.jpg',
-                title:'诚品时光',
-                subTitle: '首次了解诚品时光，绝不只是一家书店',
-                price: 56,
+                image:'https://img3.doubanio.com/view/ark_article_cover/retina/public/3052392.jpg?v=1395393449.0',
+                name:'灿烂千阳',
             },
+            {
+                image: 'https://img3.doubanio.com/view/subject/l/public/s1015872.jpg',
+                name: '我们仨'
+            },
+            {
+                image: 'https://img1.doubanio.com/view/subject/l/public/s10339418.jpg',
+                name: '偷影子的人'
+            },
+            {
+                image: 'https://img1.doubanio.com/view/subject/l/public/s2380159.jpg',
+                name: '麦田里的守望者'
+            }
         ],
-        rankList: [],
+        bookList: [],
         activeIndex: 1,
     },
     onLoad() {
@@ -56,7 +59,7 @@ Page({
                 if(res.data.data.length) {
                     const data = res.data.data
                     self.setData({
-                        rankList: data
+                        bookList: data
                     })
                 } else {
 
@@ -79,5 +82,8 @@ Page({
         wx.navigateTo({
             url: '../search/index'
         })
+    },
+    changeBatch() {
+        console.log('换一批~')
     }
 })

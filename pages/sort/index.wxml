@@ -6,9 +6,7 @@
             <view class="list-container">
                 <view class="list-ui">  
                     <block wx:for="{{item.tags}}">
-                        <navigator class="tags-nav"  url="">
-                            <text class="tag">{{item}}</text>
-                        </navigator>
+                        <view class="tag" bindtap="goList" data-tag="{{item}}">{{item}}</view>
                     </block>
                 </view>
             </view>

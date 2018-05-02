@@ -22,33 +22,13 @@
             所有书籍
         </view>
         <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
-            阅览排行
+            猜你喜欢
         </view>
     </view>
-    <!-- 书籍list -->
-    <view class="book-wrapper {{activeIndex === 1 ? 'show' : 'hidden'}}">
-        <block wx:for="{{bookList}}">
-            <view class="book-item"  bindtap="goDetail">
-                <view class="item-image">
-                    <image src="{{item.imgUrl}}" />
-                </view>
-                <view class="item-icon">
-                    <image src="{{item.iconUrl}}"/>
-                </view>
-                <view class="item-desc">
-                    <text class="title">{{item.title}}</text>
-                    <text class="subTitle">{{item.subTitle}}</text>
-                </view>
-                <view class="item-price">¥{{item.price}}</view>
-            </view>
-        </block>
-    </view>
     <!-- 书籍排行 -->
-    <view class="rank-wrapper {{activeIndex === 2 ? 'show' : 'hidden'}}">
-        <block wx:for="{{rankList}}" >
-            <view class="rank-item">
-                <view class="item-index"></view>
-                <text class="index">{{index+1}}</text>
+    <view class="book-wrapper {{activeIndex ===1 ? 'show' : 'hidden'}}">
+        <block wx:for="{{bookList}}" >
+            <view class="book-item" bindtap="goDetail">
                 <view class="item-cover">
                     <image src="{{item.cover}}"/>
                 </view>
@@ -56,12 +36,33 @@
                     <text class="title">{{item.name}}</text>
                     <text class="engTitle">{{item.engName}}</text>
                     <text class="author">{{item.author}}</text>
+                    <text class="author">{{item.publisher}}</text>
                     <text class="score">{{item.score}}分</text>
                     <text class="desc">{{item.desc}}</text>
-
                 </view>
             </view>
-
         </block>
     </view>
+
+    <!-- 猜你喜欢 -->
+
+    <view class="hobby-wrapper {{activeIndex ===2 ? 'show' : 'hidden'}}">
+        <view class="change-box" bindtap="changeBatch">
+            <view class="change-btn">
+                <image src="../../images/refresh.png" />
+            </view>
+            <text class="change-text">换一批</text>
+        </view>
+        <view class="hobby-content">
+            <block wx:for="{{hobbyList}}">
+                <view class="hobby-item">
+                    <view class="item-image">
+                        <image src="{{item.image}}" />
+                    </view>
+                    <view class="item-name">{{item.name}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+
 </view>
