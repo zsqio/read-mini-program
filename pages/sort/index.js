@@ -13,6 +13,7 @@ Page({
 
   goList(event) {
       const tag = event.target.dataset.tag
+      console.log(tag)
       wx.navigateTo({
           url:'../list/index?tag='+tag
       })

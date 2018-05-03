@@ -25,10 +25,10 @@
             猜你喜欢
         </view>
     </view>
-    <!-- 书籍排行 -->
+    <!-- 所有书籍 -->
     <view class="book-wrapper {{activeIndex ===1 ? 'show' : 'hidden'}}">
-        <block wx:for="{{bookList}}" >
-            <view class="book-item" bindtap="goDetail">
+        <block wx:for="{{bookList}}" wx:key="{{item}}">
+            <view class="book-item" data-name="{{item.name}}" bindtap="goDetail">
                 <view class="item-cover">
                     <image src="{{item.cover}}"/>
                 </view>

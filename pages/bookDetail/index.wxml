@@ -1,26 +1,41 @@
 <view class="page-container">
-    <!-- 头部视频 -->
-    <view class="video-wrapper">
-        <video id="_video-1" class="_video" src="https://mv1.doubanio.com/201804271528/f90721e8958be765defdc74a9e1f4bf4/758773a543a5696fd53ab1c1a6323108.mp4" controls="true" preload="none" style="width:100%;">
-        </video>
+    <!-- 头部封面 -->
+    <view class="cover-wrapper">
+        <view class="cover">
+            <image src="{{baseInfo.cover}}"/>
+        </view>
     </view>
 
     <!-- 书籍解说 -->
     <view class="intro-wrapper">
-            <text>每个人的心里都有一个丁丁，他去过世界上大部分地方，和小狗米卢永远奔跑不知停歇。</text>
-            <text>“丁丁之父”埃尔热曾说过，“丁丁是为从7岁到77岁的所有年轻人创作的。”《丁丁历险记》是全球读者热追至今的经典，必须收藏的经典漫画之一，也是给身边的孩子和自己的一份冒险礼物。</text>
-            <text>《丁丁历险记》22册彩色大开本套装，原价440，<b>目前限时优惠价</b>242；黑白珍藏版8册套装原价200，现价130元，豆瓣书店优选热卖中</text>
+        <view class="intro-left">
+            <view class="name">{{baseInfo.name}}</view>
+            <view class="author">
+                <text class="label">作者:</text>
+                <text class="value">{{baseInfo.author}}</text>
+            </view>
+            <view class="publisher">
+                <text class="label">出版社:</text>
+                <text class="value">{{baseInfo.publisher}}</text>
+            </view>
+            <view class="isbn">
+                <text class="label">ISBN:</text>
+                <text class="value">{{baseInfo.isbn}}</text>
+            </view>
+        </view>
+        <view class="intro-right">
+            <view class="title">总体评分</view>
+            <view class="score">{{baseInfo.score}}分</view>
+        </view>     
+
     </view>
 
     <!-- 详情tab -->
     <view class="tab-wrapper">
         <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
-            图书详情
+            简介
         </view>
         <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
-            产品规格
-        </view>
-        <view class="tab-item {{activeIndex === 3 ? 'active' : ''}}" data-index="3" bindtap="switchTab">
             评论
         </view>
     </view>
@@ -28,34 +43,22 @@
     <!-- 详情content -->
     <view class="detail-wrapper">
         <view class="book-content {{activeIndex === 1 ? 'show' : 'hidden'}}">
-            <block wx:for="{{detailList}}">
-                <view class="detail-item">
-                    <view class="item-title">{{item.title}}</view>
-                    <view class="item-intro">{{item.intro}}</view>
-                    <view class="item-image">
-                        <image src="{{item.illustration}}"></image>
-                    </view>
-                </view>
-            </block>
-        </view>
-        <view class="standard-content {{activeIndex === 2 ? 'show' : 'hidden'}}">
-            <view class="info">
-                <view class="info-cover">
-                    <image src="https://img3.doubanio.com/view/freyr_page_photo/raw/public/2455.jpg" />
-                </view>
-                <block wx:for="{{infoList}}">
-                    <view class="info-item">
-                        <text class="label">{{item.label}}</text>
-                        <text class="value">{{item.value}}</text>
-                    </view>
-                </block>
-                <view class="info-catalog">目录:</view>
-                <block wx:for="{{catalogList}}">
-                    <view class="catalog-item">{{item}}</view>
+            <view class="book-tags">
+                <view class="title">所属分类:</view>
+                <block wx:for="{{baseInfo.tag}}">
+                    <text class="tag">{{item}}</text>
                 </block>
             </view>
+            <view class="author-intro">
+                <view class="title">作者简介:</view>
+                <view class="text">{{detailInfo.authorIntro}}</view>
+            </view>
+            <view class="book-intro">
+                <view class="title">内容简介:</view>
+                <view class="text">{{detailInfo.bookIntro}}</view>
+            </view>
         </view>
-        <view class="comment-content {{activeIndex === 3 ? 'show' : 'hidden'}}">
+        <view class="comment-content {{activeIndex === 2 ? 'show' : 'hidden'}}">
             <view class="comment-count">共{{commentList.length}}条短评</view>
             <block wx:for="{{commentList}}">
                 <view class="comment-item">

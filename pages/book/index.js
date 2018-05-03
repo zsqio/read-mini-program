@@ -73,9 +73,11 @@ Page({
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
     },
-    goDetail() {
+    goDetail(event) {
+        let name = event.currentTarget.dataset.name
+        console.log(name)
         wx.navigateTo({
-            url:'../bookDetail/index?id=1'
+            url:'../bookDetail/index?name='+name
         })
     },
     goSearch() {
