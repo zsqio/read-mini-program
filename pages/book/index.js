@@ -75,7 +75,6 @@ Page({
     },
     goDetail(event) {
         let name = event.currentTarget.dataset.name
-        console.log(name)
         wx.navigateTo({
             url:'../bookDetail/index?name='+name
         })

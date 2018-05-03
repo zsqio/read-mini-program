@@ -26,8 +26,8 @@ Page({
   getBooksOfTag(tag) {
       let self = this
       wx.showLoading({
-              title: 'loading',
-          })
+         title: 'loading',
+      })
       var keyword = tag
       wx.request({
             url: 'http://192.168.1.104:9999/book/tag',

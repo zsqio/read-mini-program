@@ -39,9 +39,18 @@
     box-sizing: border-box;
 }
 .search-result {
-    display: flex;
+  width: 100%;
+  padding: 20rpx 0px;
+  box-sizing: border-box;
 }
-.search-result .result-cover {
+.search-item {
+  display: flex;
+  background: #efefef;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.search-item .result-cover {
   width: 180rpx;
   height: 240rpx;
   margin-right: 20rpx;
@@ -53,24 +62,28 @@
   display: block;
   margin-bottom: 10rpx;
 }
-.search-result .title {
+.search-item .title {
   color: #333333;
   font-size: 32rpx;
   font-weight: 600;
 }
-.search-result .engTitle {
+.search-item .engTitle {
   color: #666666;
   font-size: 28rpx;
 }
-.search-result .author {
+.search-item .author {
   color: #333333;
   font-size: 28rpx;
 }
-.search-result .score {
+.search-item .publisher {
+  color: #333333;
+  font-size: 28rpx;
+}
+.search-item .score {
   color: #e09015;
   font-size: 24rpx;
 }
-.search-result .desc {
+.search-item .desc {
   color: #666666;
   font-size: 28rpx;
 }

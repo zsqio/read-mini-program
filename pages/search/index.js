@@ -7,7 +7,7 @@ Page({
       informImg: '../../images/happy.png',
       informText: '请输入您要查找的书名~',
       searchKey:'',
-      searchResult: {},
+      searchList: [],
       hasData: false,
   },
   onLoad: function () {
@@ -22,7 +22,7 @@ Page({
         if (!this.data.searchKey) {
             return
         }
-        const _this = this
+        const self = this
         wx.showLoading({
             title: 'loading',
         })
@@ -33,26 +33,24 @@ Page({
                 'content-type':'application/x-www-form-urlencoded'
             },
             data: {
-                name: _this.data.searchKey
+                name: self.data.searchKey
             },
             success(res) {
-                if (res.data.data.length) {
-                    
+                if (res.data.data.length) {       
                     const data = res.data.data
-                    console.log(data)
-                    _this.setData({
-                        searchResult: data[0],
+                    self.setData({
+                        searchList: data,
                         hasData: true
                     })
                 } else {
-                    _this.setData({
+                    self.setData({
                         informImg: '../../images/unhappy.png',
                         informText: '非常抱歉,没有找到您想要的书籍,管理员会及时上架最新资源哦！'
                     })
                 }
             },
             fail() {
-                _this.setData({
+                self.setData({
                     informImg: '../../images/unhappy.png',
                     informText: '非常抱歉,没有找到您想要的书籍,管理员会及时上架最新资源哦！'
                 })
@@ -62,4 +60,10 @@ Page({
             }
         })
     },
+    goDetail(event) {
+        let name = event.currentTarget.dataset.name
+        wx.navigateTo({
+            url:'../bookDetail/index?name='+name
+        })
+    }
 })
