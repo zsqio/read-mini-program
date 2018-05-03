@@ -15,18 +15,28 @@ Page({
   onLoad: function (options) {
       var self = this
       var tag = options.tag
-      self.getBooksOfTag(tag)    
+      self.getBooksOfTag(tag)  
+
+      //设置页面title
+      wx.setNavigationBarTitle({
+        title: tag
+      })  
   },
+  //根据标签搜索图书信息
   getBooksOfTag(tag) {
+      let self = this
       wx.showLoading({
               title: 'loading',
           })
       var keyword = tag
       wx.request({
-        url: 'http://192.168.1.104:9999/book/search?tag='+ keyword,
-        method:'get',
+            url: 'http://192.168.1.104:9999/book/tag',
+            method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
+            },
+            data: {
+                tag: keyword
             },
             success(res) {
                 if(res.data.data.length) {
@@ -43,4 +53,10 @@ Page({
             }
       })
   },
+  goDetail(event) {
+      const name = event.currentTarget.dataset.name
+      wx.navigateTo({
+          url:'../bookDetail/index?name=' + name
+      })
+  }
 })

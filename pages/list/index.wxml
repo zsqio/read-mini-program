@@ -1,10 +1,19 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="page-container">
+    <view class="book-wrapper">
+        <block wx:for="{{bookList}}">
+            <view class="book-item" bindtap="goDetail" data-name="{{item.name}}">
+                <view class="item-cover">
+                    <image src="{{item.cover}}"/>
+                </view>
+                <view class="item-info">
+                    <text class="title">{{item.name}}</text>
+                    <text class="engTitle">{{item.engName}}</text>
+                    <text class="author">{{item.author}}</text>
+                    <text class="publisher">{{item.publisher}}</text>
+                    <text class="score">{{item.score}}分</text>
+                    <text class="desc">{{item.desc}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
 </view>

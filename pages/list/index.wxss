@@ -1,21 +1,51 @@
-/**index.wxss**/
-.userinfo {
+.book-wrapper {
+  width: 100%;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.book-wrapper .book-item {
+  background: #fff;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.book-item .item-cover {
+  width: 180rpx;
+  height: 240rpx;
+  margin-right: 20rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.book-item .item-info {
+  flex: 1;
 }
-
-.usermotto {
-  margin-top: 200px;
+.item-info text {
+  display: block;
+  margin-bottom: 10rpx;
+}
+.book-item .title {
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.book-item .engTitle {
+  color: #666666;
+  font-size: 28rpx;
+}
+.book-item .author {
+  color: #333333;
+  font-size: 28rpx;
+}
+.book-item .publisher {
+  color: #333333;
+  font-size: 28rpx;
+}
+.book-item .score {
+  color: #e09015;
+  font-size: 24rpx;
+}
+.book-item .desc {
+  color: #666666;
+  font-size: 28rpx;
 }
