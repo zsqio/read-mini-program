@@ -11,6 +11,7 @@ Page({
             tag: []
         },
         name:'',
+        user: '',
         detailInfo: {
             authorIntro: '',
             bookIntro: '',
@@ -44,52 +45,70 @@ Page({
 
         ],
         activeIndex: 1,
-        likeStatus: false,
+        likeStatus: 0,
         likeImg: '../../images/tobeliked.png',
     },
     onLoad(options) {
         let self = this
         let name = options.name
+        self.setData ({
+            name: name
+        })
         //获取图书基本信息
         self.getBookInfo(name)
         //获取图书详细信息
-        self.getBookDetail(name)      
+        self.getBookDetail(name) 
+        wx.getUserInfo({
+            success: function(res) {
+                let userInfo = res.userInfo
+                let nickName = userInfo.nickName
+                console.log(name, nickName)
+                self.getCollectStaus(name,nickName)
+                self.setData({
+                    user: nickName
+                })
+            }
+        })                       
     },
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
     },
     like() {
         let self = this;
-        self.setData(
-            {
-                likeStatus: !self.data.likeStatus
-            }
-        ) 
-        if(self.data.likeStatus) {
-            self.setData(
-                {
-                    likeImg: '../../images/liked.png'
-                }
-            )
-            wx.showToast({
-                title: '已收藏',
-                icon: 'success',
-                duration: 2000
-            })
-        } else {            
-            self.setData(
-                {
-                    likeImg: '../../images/tobeliked.png'
-                }
-            )
+        let url = ''
+        if(self.data.likeStatus) { 
+            url = 'delete'       
             wx.showToast({
                 title: '已取消收藏',
                 icon: 'success',
                 duration: 2000
             })
-        }
-        
-        
+        } else {  
+            url = 'insert'  
+            wx.showToast({
+                title: '已收藏',
+                icon: 'success',
+                duration: 2000
+            })
+        } 
+        self.collect(url,self.data.name, self.data.user) 
+    },
+    collect(url, name, user) {
+        let self = this
+        wx.request({
+            url: "http://192.168.1.104:9999/collect/"+url,
+            method:'post',
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
+            data: {
+                name,
+                user,
+            },
+            success(res) {  
+                self.getCollectStaus(self.data.name, self.data.user)
+            }
+        })
     },
     getBookDetail(name) {
         let self = this
@@ -144,5 +163,33 @@ Page({
                 wx.hideLoading()
             }
         })
-    }
+    },
+    getCollectStaus(name, user) {
+        let self = this
+        wx.request({
+            url: 'http://192.168.1.104:9999/collect/status',
+            method:'post',
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
+            data: {
+                name: name,
+                user: user
+            },
+            success(res) {
+                let status = res.data.status
+                 if(status) {
+                     self.setData({
+                         likeStatus: status,
+                         likeImg: '../../images/liked.png'
+                     })
+                 } else {
+                     self.setData({
+                         likeStatus: status,
+                         likeImg: '../../images/tobeliked.png'
+                     })
+                 }        
+            }
+        })
+    } 
 })
