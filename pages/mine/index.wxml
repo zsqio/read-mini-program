@@ -6,19 +6,19 @@
   </view>
   <!--列表信息 -->
   <view class="list-wrapper">
-    <view class="list-item">
+    <view class="list-item" data-name="userInfo" bindtap="goDetail">
       <text class="item-name">
         个人信息
       </text>
       <text class="item-right"></text>
     </view>
-    <view class="list-item">
+    <view class="list-item" data-name="collect" bindtap="goDetail">
       <text class="item-name">
         我的收藏
       </text>
       <text class="item-right"></text>
     </view>
-    <view class="list-item">
+    <view class="list-item" data-name="wishes" bindtap="goDetail">
       <text class="item-name">
         心愿单
       </text>

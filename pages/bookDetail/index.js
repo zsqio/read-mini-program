@@ -91,9 +91,9 @@ Page({
                 duration: 2000
             })
         } 
-        self.collect(url,self.data.name, self.data.user) 
+        self.collect(url,self.data.name, self.data.user, self.data.baseInfo.cover) 
     },
-    collect(url, name, user) {
+    collect(url, name, user, cover) {
         let self = this
         wx.request({
             url: "http://192.168.1.104:9999/collect/"+url,
@@ -104,6 +104,7 @@ Page({
             data: {
                 name,
                 user,
+                cover
             },
             success(res) {  
                 self.getCollectStaus(self.data.name, self.data.user)

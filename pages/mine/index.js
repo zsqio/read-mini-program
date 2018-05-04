@@ -22,5 +22,11 @@ Page({
         userInfo:userInfo
       })
     })
+  },
+  goDetail(event) {
+    const name = event.currentTarget.dataset.name
+    wx.navigateTo({
+      url: `../${name}/index`
+    })
   }
 })

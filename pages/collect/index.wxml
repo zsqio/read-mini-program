@@ -1,0 +1,12 @@
+<view class="page-container">
+    <view class="collect-wrapper">
+        <block wx:for="{{collectList}}">
+            <view class="collect-item">
+                <view class="item-image">
+                    <image src="{{item.cover}}" />
+                </view>
+                <view class="item-name">{{item.name}}</view>
+            </view>
+        </block>
+    </view>
+</view>
