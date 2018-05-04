@@ -168,7 +168,7 @@ Page({
         let self = this
         wx.request({
             url: 'http://192.168.1.104:9999/collect/status',
-            method:'post',
+            method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
             },
