@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 var app = getApp()
+var API = require('../../utils/api.js');
 Page({
   data: {
       bookList: []
@@ -30,7 +31,7 @@ Page({
       })
       var keyword = tag
       wx.request({
-            url: 'http://192.168.1.104:9999/book/tag',
+            url: API.BOOK_Of_TAG,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'

@@ -1,6 +1,5 @@
-//index.js
-//获取应用实例
 var app = getApp()
+var API = require('../../utils/api.js');
 Page({
   data: {
       userInfo: {},
@@ -27,7 +26,7 @@ Page({
             title: 'loading',
         })
         wx.request({
-            url: 'http://192.168.1.104:9999/book/list',
+            url: API.BOOK_LIST,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'

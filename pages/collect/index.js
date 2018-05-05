@@ -1,4 +1,6 @@
 var util = require('../../utils/util.js');
+var API = require('../../utils/api.js');
+var app = getApp()
 Page({
   data:{
       collectList: []
@@ -22,7 +24,7 @@ Page({
          title: 'loading',
       })
       wx.request({
-             url: 'http://192.168.1.104:9999/collect/list',
+             url: API.COLLECT_LIST,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
@@ -43,6 +45,13 @@ Page({
             complete() {
                 wx.hideLoading()
             }
+      })
+  },
+  goDetail(event) {
+      console.log('11')
+      const name = event.currentTarget.dataset.name
+      wx.navigateTo({
+          url:'../bookDetail/index?name=' + name
       })
   }
 })

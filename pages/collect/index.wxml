@@ -1,7 +1,7 @@
 <view class="page-container">
     <view class="collect-wrapper">
         <block wx:for="{{collectList}}">
-            <view class="collect-item">
+            <view class="collect-item" data-name="{{item.name}}" bindtap="goDetail">
                 <view class="item-image">
                     <image src="{{item.cover}}" />
                 </view>

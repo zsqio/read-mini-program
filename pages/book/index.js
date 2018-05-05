@@ -1,4 +1,5 @@
 var app = getApp()
+var API = require('../../utils/api.js');
 Page({
     data: {
         bannerList: [
@@ -50,7 +51,7 @@ Page({
             title: 'loading',
         })
         wx.request({
-            url: 'http://192.168.1.104:9999/book/list',
+            url: API.BOOK_LIST,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
@@ -69,6 +70,11 @@ Page({
                 wx.hideLoading()
             }
         })
+    },
+
+    //当用户存在收藏的图书的时候，将我的收藏作为猜你喜欢的内容
+    getCollectList(user) {
+
     },
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })

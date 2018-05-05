@@ -1,4 +1,5 @@
 var app = getApp()
+var API = require('../../utils/api.js');
 Page({
     data: {
         baseInfo: {
@@ -96,7 +97,7 @@ Page({
     collect(url, name, user, cover) {
         let self = this
         wx.request({
-            url: "http://192.168.1.104:9999/collect/"+url,
+            url: API.BOOK_COLLECT + url,
             method:'post',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
@@ -114,7 +115,7 @@ Page({
     getBookDetail(name) {
         let self = this
         wx.request({
-            url: 'http://192.168.1.104:9999/detail',
+            url: API.BOOK_DETAIL,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
@@ -142,7 +143,7 @@ Page({
             }
         )
         wx.request({
-            url: 'http://192.168.1.104:9999/book/list',
+            url: API.BOOK_LIST,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
@@ -168,7 +169,7 @@ Page({
     getCollectStaus(name, user) {
         let self = this
         wx.request({
-            url: 'http://192.168.1.104:9999/collect/status',
+            url: API.COLLECT_STATUS,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
