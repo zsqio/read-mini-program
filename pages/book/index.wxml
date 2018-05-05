@@ -42,7 +42,7 @@
                 </view>
             </view>
         </block>
-        <view class="loading-box">{{loadText}}</view>        
+        <view class="loading-box {{loaded ? 'show': 'hidden'}}">已经到底了哦~</view>        
     </view>
 
     <!-- 猜你喜欢 -->

@@ -43,7 +43,7 @@ Page({
         activeIndex: 1,
         pageIndex: 1,
         totalPage: 0,
-        loadText: "正在加载",
+        loaded: false,
     },
     onLoad() {
         this.getBookCount()
@@ -53,6 +53,7 @@ Page({
         const self = this
         wx.showLoading({
             title: 'loading',
+            duration: 3000
         })
         wx.request({
             url: API.BOOK_LIST,
@@ -66,15 +67,11 @@ Page({
             success(res) {
                 if(res.data.data.length) {
                     const data = [...self.data.bookList, ...res.data.data]
-                    console.log(data)
                     self.setData({
                         bookList: data,
                         pageIndex: self.data.pageIndex + 1,
                     })
                 }        
-            },
-            complete() {
-                wx.hideLoading()
             }
         })
     },
@@ -117,7 +114,9 @@ Page({
         //猜你喜欢不做分页加载
         if(self.data.activeIndex === 1) {
             if(self.data.pageIndex > self.data.totalPage ) {
-                return false
+                self.setData({
+                    loaded: true
+                })
             } else {
                 self.getBookList()
             }
