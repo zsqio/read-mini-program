@@ -112,6 +112,10 @@
   font-size: 28rpx;
   color: #333;
   text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
 }
 .loading-box {
   text-align: center;

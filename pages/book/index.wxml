@@ -56,9 +56,9 @@
         </view>
         <view class="hobby-content">
             <block wx:for="{{hobbyList}}">
-                <view class="hobby-item">
+                <view class="hobby-item" data-name="{{item.name}}" bindtap="goDetail">
                     <view class="item-image">
-                        <image src="{{item.image}}" />
+                        <image src="{{item.cover}}" />
                     </view>
                     <view class="item-name">{{item.name}}</view>
                 </view>

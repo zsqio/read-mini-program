@@ -13,47 +13,24 @@ Page({
         autoplay: true,
         interval: 5000,
         duration: 1000,
-        hobbyList: [
-            {
-                image:'https://img1.doubanio.com/view/subject/l/public/s2659208.jpg',
-                name:'月亮和六便士',
-            },
-            {
-                image:'https://img1.doubanio.com/view/subject/l/public/s3984108.jpg',
-                name:'目送',
-            },
-            {
-                image:'https://img3.doubanio.com/view/ark_article_cover/retina/public/3052392.jpg?v=1395393449.0',
-                name:'灿烂千阳',
-            },
-            {
-                image: 'https://img3.doubanio.com/view/subject/l/public/s1015872.jpg',
-                name: '我们仨'
-            },
-            {
-                image: 'https://img1.doubanio.com/view/subject/l/public/s10339418.jpg',
-                name: '偷影子的人'
-            },
-            {
-                image: 'https://img1.doubanio.com/view/subject/l/public/s2380159.jpg',
-                name: '麦田里的守望者'
-            }
-        ],
+        hobbyList: [],
         bookList: [],
         activeIndex: 1,
         pageIndex: 1,
         totalPage: 0,
+        totalCount: 0,
         loaded: false,
     },
     onLoad() {
         this.getBookCount()
         this.getBookList() 
+        this.getRandomList()
     },
     getBookList() {
         const self = this
         wx.showLoading({
             title: 'loading',
-            duration: 3000
+            duration: 1000
         })
         wx.request({
             url: API.BOOK_LIST,
@@ -75,9 +52,30 @@ Page({
             }
         })
     },
-    //当用户存在收藏的图书的时候，将我的收藏作为猜你喜欢的内容
-    getCollectList(user) {
+    //随机拉取六条数据记录
+    getRandomList() {
+        const self = this
+        let random = Math.round(parseInt(Math.random()*self.data.totalCount))
+        if(self.data.totalCount - random < 6) {
+            random = Math.abs(random - 6)
+        }
+        wx.request({
+            url: API.BOOK_LIST,
+            method:'get',
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
+            data: {
+                startIndex: random
+            },
+            success(res) {
+                const data = res.data.data
+                self.setData({
+                    hobbyList: data
+                })
+            },
 
+        })
     },
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
@@ -94,17 +92,23 @@ Page({
         })
     },
     changeBatch() {
-        console.log('换一批~')
+        wx.showLoading({
+            title: 'loading',
+            duration: 500
+        })
+        this.getRandomList()
     },
     getBookCount() {
         let self = this
         wx.request({
             url: API.BOOK_COUNT,
+
             success(res) {
-                const totalPage = Math.ceil((res.data.data/6))
-                console.log(totalPage)
+                const totalCount = res.data.data
+                const totalPage = Math.ceil((totalCount/6))
                 self.setData({
-                    totalPage: totalPage
+                    totalPage: totalPage,
+                    totalCount: totalCount
                 }) 
             } 
         })
