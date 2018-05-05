@@ -22,9 +22,10 @@ Page({
         loaded: false,
     },
     onLoad() {
-        this.getBookCount()
-        this.getBookList() 
-        this.getRandomList()
+        const self = this
+        self.getBookCount()
+        self.getBookList() 
+        self.getRandomList()
     },
     getBookList() {
         const self = this

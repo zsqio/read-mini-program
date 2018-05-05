@@ -1,69 +1,70 @@
-<view class="page-container">
-    <!-- 头部banner -->
-    <view class="swiper-wrapper">
-        <swiper indicator-dots="{{indicatorDots}}"
-                autoplay="{{autoplay}}"
-                interval="{{interval}}"
-                duration="{{duration}}"
-                indicator-active-color="white">
-            <block wx:for="{{bannerList}}">
-                <swiper-item>
-                    <image src="{{item}}" class="slide-image"/>
-                </swiper-item>
-            </block>
-        </swiper>
-    </view>
-    <view class="search-placeholder" bindtap="goSearch">
-        <icon type="search" color="#1afa29" size="18"></icon>
-    </view>
-    <!-- 导航tab -->
-    <view class="tab-wrapper">
-        <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
-            所有书籍
-        </view>
-        <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
-            猜你喜欢
-        </view>
-    </view>
-    <!-- 所有书籍 -->
-    <view class="book-wrapper {{activeIndex ===1 ? 'show' : 'hidden'}}">
-        <block wx:for="{{bookList}}" wx:key="{{item}}">
-            <view class="book-item" data-name="{{item.name}}" bindtap="goDetail">
-                <view class="item-cover">
-                    <image src="{{item.cover}}"/>
-                </view>
-                <view class="item-info">
-                    <text class="title">{{item.name}}</text>
-                    <text class="engTitle">{{item.engName}}</text>
-                    <text class="author">{{item.author}}</text>
-                    <text class="author">{{item.publisher}}</text>
-                    <text class="score">{{item.score}}分</text>
-                    <text class="desc">{{item.desc}}</text>
-                </view>
-            </view>
-        </block>
-        <view class="loading-box {{loaded ? 'show': 'hidden'}}">已经到底了哦~</view>        
-    </view>
 
-    <!-- 猜你喜欢 -->
-
-    <view class="hobby-wrapper {{activeIndex ===2 ? 'show' : 'hidden'}}">
-        <view class="change-box" bindtap="changeBatch">
-            <view class="change-btn">
-                <image src="../../images/refresh.png" />
-            </view>
-            <text class="change-text">换一批</text>
+    <view class="page-container">
+        <!-- 头部banner -->
+        <view class="swiper-wrapper">
+            <swiper indicator-dots="{{indicatorDots}}"
+                    autoplay="{{autoplay}}"
+                    interval="{{interval}}"
+                    duration="{{duration}}"
+                    indicator-active-color="white">
+                <block wx:for="{{bannerList}}">
+                    <swiper-item>
+                        <image src="{{item}}" class="slide-image"/>
+                    </swiper-item>
+                </block>
+            </swiper>
         </view>
-        <view class="hobby-content">
-            <block wx:for="{{hobbyList}}">
-                <view class="hobby-item" data-name="{{item.name}}" bindtap="goDetail">
-                    <view class="item-image">
-                        <image src="{{item.cover}}" />
+        <view class="search-placeholder" bindtap="goSearch">
+            <icon type="search" color="#1afa29" size="18"></icon>
+        </view>
+        <!-- 导航tab -->
+        <view class="tab-wrapper">
+            <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
+                所有书籍
+            </view>
+            <view class="tab-item {{activeIndex === 2 ? 'active' : ''}}" data-index="2" bindtap="switchTab">
+                猜你喜欢
+            </view>        
+        </view>
+        <!-- 所有书籍 -->
+        <view class="book-wrapper {{activeIndex ===1 ? 'show' : 'hidden'}}">
+            <block wx:for="{{bookList}}" wx:key="{{item}}">
+                <view class="book-item" data-name="{{item.name}}" bindtap="goDetail">
+                    <view class="item-cover">
+                        <image src="{{item.cover}}"/>
                     </view>
-                    <view class="item-name">{{item.name}}</view>
+                    <view class="item-info">
+                        <text class="title">{{item.name}}</text>
+                        <text class="engTitle">{{item.engName}}</text>
+                        <text class="author">{{item.author}}</text>
+                        <text class="author">{{item.publisher}}</text>
+                        <text class="score">{{item.score}}分</text>
+                        <text class="desc">{{item.desc}}</text>
+                    </view>
                 </view>
             </block>
+            <view class="loading-box {{loaded ? 'show': 'hidden'}}">已经到底了哦~</view>        
         </view>
-    </view>
 
-</view>
+        <!-- 猜你喜欢 -->
+
+        <view class="hobby-wrapper {{activeIndex ===2 ? 'show' : 'hidden'}}">
+            <view class="change-box" bindtap="changeBatch">
+                <view class="change-btn">
+                    <image src="../../images/refresh.png" />
+                </view>
+                <text class="change-text">换一批</text>
+            </view>
+            <view class="hobby-content">
+                <block wx:for="{{hobbyList}}">
+                    <view class="hobby-item" data-name="{{item.name}}" bindtap="goDetail">
+                        <view class="item-image">
+                            <image src="{{item.cover}}" />
+                        </view>
+                        <view class="item-name">{{item.name}}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+
+    </view>

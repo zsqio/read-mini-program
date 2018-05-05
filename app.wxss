@@ -14,7 +14,7 @@ image {
 .tab-wrapper {
   display: flex;
   padding: 20rpx 0 0;
-  margin: 20rpx 0;
+  margin: 10px 0;
   background: #fff;
 }
 

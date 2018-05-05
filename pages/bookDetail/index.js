@@ -48,6 +48,8 @@ Page({
         activeIndex: 1,
         likeStatus: 0,
         likeImg: '../../images/tobeliked.png',
+        fixTop: false,
+        windowHeight: 0
     },
     onLoad(options) {
         let self = this
@@ -69,7 +71,15 @@ Page({
                     user: nickName
                 })
             }
-        })                       
+        }) 
+        wx.getSystemInfo({
+            success(res) {
+                const height = res.windowHeight
+                self.setData({
+                    windowHeight: height
+                })
+            }
+        })                      
     },
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
@@ -193,5 +203,20 @@ Page({
                  }        
             }
         })
-    } 
+    },
+    handleScroll(event) {
+        const self = this
+        var scrollTop = event.detail.scrollTop
+        console.log(scrollTop)
+        if(scrollTop >= 330) {
+            self.setData({
+                fixTop: true
+            })
+        } else {
+            self.setData({
+                fixTop: false
+            })
+        }
+        
+    },
 })

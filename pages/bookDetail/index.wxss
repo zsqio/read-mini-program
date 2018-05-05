@@ -1,16 +1,17 @@
 .cover-wrapper {
   width: 100%;
-  height: 400rpx;
+  height: 180px;
   background: rgba(0, 0, 0, 0.3);
-  padding-top: 10rpx;
+  padding-top: 10px;
   box-sizing: border-box;
 }
 .cover-wrapper .cover {
-  width: 300rpx;
-  height: 380rpx;
+  width: 130px;
+  height: 160px;
   margin: 0rpx auto;
 }
 .intro-wrapper {
+  height: 150px;
   padding: 40rpx 20rpx;
   background: rbga(255, 255, 255, 0.8);
   box-sizing: border-box;
@@ -155,4 +156,12 @@
 .like-box {
   width: 80rpx;
   height: 80rpx;
+}
+.tab-wrapper.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  margin: 0;
 }

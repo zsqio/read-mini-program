@@ -1,3 +1,4 @@
+<scroll-view scroll-y style="height: {{windowHeight}}px;" bindscroll="handleScroll">
 <view class="page-container">
     <!-- 头部封面 -->
     <view class="cover-wrapper">
@@ -31,7 +32,7 @@
     </view>
 
     <!-- 详情tab -->
-    <view class="tab-wrapper">
+    <view class="tab-wrapper {{fixTop?'fixed':''}}">
         <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
             简介
         </view>
@@ -81,3 +82,4 @@
         </view>
     </view>
 </view>
+</scroll-view>
