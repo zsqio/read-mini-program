@@ -1,0 +1,30 @@
+<view class="page-container">
+    <!--列表信息 -->
+    <view class="list-wrapper">
+        <view class="list-item">
+            <view class="item-name">头像</view>
+            <view class="item-value avatar">
+                <image src="{{userInfo.avatarUrl}}"/>
+            </view>
+        </view>
+        <view class="list-item">
+            <view class="item-name">
+                昵称
+            </view>
+            <view class="item-value">{{userInfo.nickName}}</view>
+        </view>
+        <view class="list-item">
+            <view class="item-name">
+                性别
+            </view>
+            <view class="item-value">{{userInfo.gender}}</view>
+        </view>
+        <view class="list-item">
+            <view class="item-name">
+                地区
+            </view>
+            <view class="item-value">{{userInfo.country}}</view> 
+            <view class="item-value">{{userInfo.province}}</view>
+        </view>
+    </view>
+</view>

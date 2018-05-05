@@ -6,7 +6,8 @@
     "pages/bookDetail/index",
     "pages/search/index",
     "pages/list/index",
-    "pages/collect/index"
+    "pages/collect/index",
+    "pages/userInfo/index"
   ],
   "window": {
     "backgroundTextStyle": "bold",
