@@ -41,9 +41,13 @@ Page({
         ],
         bookList: [],
         activeIndex: 1,
+        pageIndex: 1,
+        totalPage: 0,
+        loadText: "正在加载",
     },
     onLoad() {
-        this.getBookList();
+        this.getBookCount()
+        this.getBookList() 
     },
     getBookList() {
         const self = this
@@ -56,22 +60,24 @@ Page({
             header: {
                 'content-type':'application/x-www-form-urlencoded'
             },
+            data: {
+                pageIndex: self.data.pageIndex
+            },
             success(res) {
                 if(res.data.data.length) {
-                    const data = res.data.data
+                    const data = [...self.data.bookList, ...res.data.data]
+                    console.log(data)
                     self.setData({
-                        bookList: data
+                        bookList: data,
+                        pageIndex: self.data.pageIndex + 1,
                     })
-                } else {
-
-                }               
+                }        
             },
             complete() {
                 wx.hideLoading()
             }
         })
     },
-
     //当用户存在收藏的图书的时候，将我的收藏作为猜你喜欢的内容
     getCollectList(user) {
 
@@ -92,5 +98,33 @@ Page({
     },
     changeBatch() {
         console.log('换一批~')
+    },
+    getBookCount() {
+        let self = this
+        wx.request({
+            url: API.BOOK_COUNT,
+            success(res) {
+                const totalPage = Math.ceil((res.data.data/6))
+                console.log(totalPage)
+                self.setData({
+                    totalPage: totalPage
+                }) 
+            } 
+        })
+    },
+    onReachBottom() {
+        let self = this
+        //猜你喜欢不做分页加载
+        if(self.data.activeIndex === 1) {
+            if(self.data.pageIndex > self.data.totalPage ) {
+                return false
+            } else {
+                self.getBookList()
+            }
+        }else {
+            return
+        }
+        
+        
     }
 })

@@ -42,6 +42,7 @@
                 </view>
             </view>
         </block>
+        <view class="loading-box">{{loadText}}</view>        
     </view>
 
     <!-- 猜你喜欢 -->
