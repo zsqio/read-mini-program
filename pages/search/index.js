@@ -26,7 +26,7 @@ Page({
             title: 'loading',
         })
         wx.request({
-            url: API.BOOK_LIST,
+            url: API.BOOK_SEARCH,
             method:'get',
             header: {
                 'content-type':'application/x-www-form-urlencoded'
