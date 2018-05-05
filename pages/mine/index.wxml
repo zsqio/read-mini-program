@@ -18,7 +18,7 @@
       </view>
       <view class="item-right"></view>
     </view>
-    <view class="list-item" data-name="wishes" bindtap="goDetail">
+    <view class="list-item" data-name="wishs" bindtap="goDetail">
       <view class="item-name">
         心愿单
       </view>

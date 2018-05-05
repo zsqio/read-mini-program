@@ -1,0 +1,25 @@
+.btn-box {
+    position: fixed;
+    bottom: 40rpx;
+    left: 20rpx;
+    right: 20rpx;
+}
+
+.inform-box {
+    margin-top: 200rpx;
+    background: #fff;
+}
+.inform-box .inform-logo {
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    background-size: cover;
+}
+.inform-box .inform-text {
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}

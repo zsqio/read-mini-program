@@ -1,0 +1,10 @@
+<view class="page-container">
+    <view class="inform-box">
+        <view class="inform-logo">
+            <image src="{{informImg}}" /></view>
+        <view class="inform-text">快来添加你的心愿单哦~</view>
+    </view>
+    <view class="btn-box">
+        <button type="primary">新增心愿</button>
+    </view> 
+</view>

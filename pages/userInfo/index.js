@@ -4,6 +4,9 @@ Page({
     },
     onLoad() {
         var self = this
+        wx.setNavigationBarTitle({
+            title: "个人信息"
+        }) 
         wx.getUserInfo({
             success: function(res) {
                 var userInfo = res.userInfo
@@ -20,5 +23,7 @@ Page({
                 })
             }
         }) 
+        
+        
     }
 })
