@@ -1,5 +1,6 @@
 var app = getApp()
 var API = require('../../utils/api.js');
+var Util = require('../../utils/util.js');
 Page({
     data: {
         baseInfo: {
@@ -250,6 +251,10 @@ Page({
             },
             success(res) {
                 const data = res.data.data
+                data.forEach((item, index) => {
+                    let time = new Date(parseInt(item.commentDate))
+                    item.commentDate = Util.formatTime(time)
+                })
                 self.setData({
                     commentList: data
                 })

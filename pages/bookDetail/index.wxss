@@ -143,6 +143,10 @@
   color: #666666;
   font-size: 28rpx;
 }
+.item-text .time {
+  color: #666666;
+  font-size: 24rpx;
+}
 
 .operate-wrapper {
   position: fixed;

@@ -68,6 +68,7 @@
                     <view class="item-text">
                         <view class="name">{{item.user}}</view>
                         <view class="comment">{{item.comment}}</view>
+                        <view class="time">{{item.commentDate}}</view>
                     </view>
 
                 </view>
