@@ -1,17 +1,16 @@
 .cover-wrapper {
   width: 100%;
-  height: 180px;
+  height: 400rpx;
   background: rgba(0, 0, 0, 0.3);
-  padding-top: 10px;
+  padding-top: 10rpx;
   box-sizing: border-box;
 }
 .cover-wrapper .cover {
-  width: 130px;
-  height: 160px;
+  width: 300rpx;
+  height: 380rpx;
   margin: 0rpx auto;
 }
 .intro-wrapper {
-  height: 150px;
   padding: 40rpx 20rpx;
   background: rbga(255, 255, 255, 0.8);
   box-sizing: border-box;
@@ -102,7 +101,10 @@
   color: #333;
 
 }
-
+.comment-content {
+  padding-bottom: 120rpx;
+  box-sizing: border-box;
+}
 .comment-content .comment-count {
   color: #333333;
   font-size: 32rpx;
@@ -144,7 +146,7 @@
 
 .operate-wrapper {
   position: fixed;
-  bottom: 40rpx;
+  top: 40rpx;
   right: 5%;
   z-index: 40rpx;
   width: 80rpx;
@@ -157,11 +159,120 @@
   width: 80rpx;
   height: 80rpx;
 }
-.tab-wrapper.fixed {
+
+/*评论输入框样式*/
+.input-box {
   position: fixed;
   left: 0;
-  top: 0;
+  bottom: 0;
   right: 0;
-  z-index: 2;
-  margin: 0;
+  background-color: #efefef;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+.input-bar {
+  width: 100%;
+  height: 100rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2rpx solid #fff;
+}
+.input-bar .comment-input {
+  flex: 1;
+}
+.input-bar .comment-emoji {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+.input-bar .comment-btn {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 10rpx;
+}
+
+.emoji {
+  background-color: #fff;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  padding-top: 4rpx;
+  box-sizing: border-box;
+  font-size: 40rpx;
+}
+.emoji-box {
+  background: #efefef;
+  position: relative;
+  height: 200px;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  margin-bottom: -200px;
+}
+.emoji-cell {
+  width: 10%;
+  height: 33px;
+  display: inline-block;
+}
+.emoji-cell image {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 3px;
+}
+.emoji-move-in {
+  -webkit-animation: emoji-move-in 0.3s forwards;
+  animation: emoji-move-in 0.3s forwards;
+}
+
+.emoji-move-out {
+  -webkit-animation: emoji-move-out 0.3s forwards;
+  animation: emoji-move-out 0.3s forwards;
+}
+
+.no-emoji-move {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes emoji-move-in {
+  0% {
+    margin-bottom: -200px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes emoji-move-in {
+  0% {
+    margin-bottom: -200px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@-webkit-keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -200px;
+  }
+}
+
+@keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -200px;
+  }
 }

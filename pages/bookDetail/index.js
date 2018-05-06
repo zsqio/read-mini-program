@@ -48,8 +48,25 @@ Page({
         activeIndex: 1,
         likeStatus: 0,
         likeImg: '../../images/tobeliked.png',
-        fixTop: false,
-        windowHeight: 0
+        isShow: false,
+        isLoad: true,
+        emojiChar: "☺-😋-😌-😍-😏-😜-😝-😞-😔-😪-😭-😁-😂-😃-😅-😆-👿-😒-😓-😔-😏-😖-😘-😚-😒-😡-😢-😣-😤-😢-😨-😳-😵-😷-😸-😻-😼-😽-😾-😿-🙊-🙋-🙏-✈-🚇-🚃-🚌-🍄-🍅-🍆-🍇-🍈-🍉-🍑-🍒-🍓-🐔-🐶-🐷-👦-👧-👱-👩-👰-👨-👲-👳-💃-💄-💅-💆-💇-🌹-💑-💓-💘-🚲",
+        emoji: [
+        "60a", "60b", "60c", "60d", "60f",
+        "61b", "61d", "61e", "61f",
+        "62a", "62c", "62e",
+        "602", "603", "605", "606", "608",
+        "612", "613", "614", "615", "616", "618", "619", "620", "621", "623", "624", "625", "627", "629", "633", "635", "637",
+        "63a", "63b", "63c", "63d", "63e", "63f",
+        "64a", "64b", "64f", "681",
+        "68a", "68b", "68c",
+        "344", "345", "346", "347", "348", "349", "351", "352", "353",
+        "414", "415", "416",
+        "466", "467", "468", "469", "470", "471", "472", "473",
+        "483", "484", "485", "486", "487", "490", "491", "493", "498", "6b4"
+        ],
+        emojis: [],
+        content: ''    
     },
     onLoad(options) {
         let self = this
@@ -72,15 +89,20 @@ Page({
                 })
             }
         }) 
-        wx.getSystemInfo({
-            success(res) {
-                const height = res.windowHeight
-                self.setData({
-                    windowHeight: height
-                })
-            }
+        var em = {}, that = this, emChar = that.data.emojiChar.split("-");
+        var emojis = []
+        self.data.emoji.forEach(function (v, i) {
+        em = {
+            char: emChar[i],
+            emoji: "0x1f" + v
+        };
+        emojis.push(em)
+        });
+        self.setData({
+            emojis: emojis
         })                      
     },
+    //切换tab
     switchTab(event) {
         this.setData({ activeIndex: +event.target.dataset.index })
     },
@@ -104,6 +126,8 @@ Page({
         } 
         self.collect(url,self.data.name, self.data.user, self.data.baseInfo.cover) 
     },
+
+    //收藏或者取消收藏图书
     collect(url, name, user, cover) {
         let self = this
         wx.request({
@@ -122,6 +146,8 @@ Page({
             }
         })
     },
+
+    //获取图书的作者以及内容简介
     getBookDetail(name) {
         let self = this
         wx.request({
@@ -145,6 +171,7 @@ Page({
             }
         })
     },
+    //获取图书基本信息
     getBookInfo(name) {
         let self = this
         wx.showLoading(
@@ -176,6 +203,7 @@ Page({
             }
         })
     },
+    //获取图书收藏状态
     getCollectStaus(name, user) {
         let self = this
         wx.request({
@@ -204,19 +232,22 @@ Page({
             }
         })
     },
-    handleScroll(event) {
+    emojiShowHide() {
         const self = this
-        var scrollTop = event.detail.scrollTop
-        console.log(scrollTop)
-        if(scrollTop >= 330) {
-            self.setData({
-                fixTop: true
-            })
-        } else {
-            self.setData({
-                fixTop: false
-            })
-        }
-        
+        console.log('show emoji')
+        self.setData({
+            isShow: !self.data.isShow,
+            isLoad: false,
+        })
     },
+    emojiChoose(event) {
+        const self = this
+        const emoji = event.currentTarget.dataset.emoji
+        this.setData({
+            content: self.data.content + emoji 
+        })
+    },
+    submitComment() {
+        
+    }
 })

@@ -1,4 +1,3 @@
-<scroll-view scroll-y style="height: {{windowHeight}}px;" bindscroll="handleScroll">
 <view class="page-container">
     <!-- 头部封面 -->
     <view class="cover-wrapper">
@@ -32,7 +31,7 @@
     </view>
 
     <!-- 详情tab -->
-    <view class="tab-wrapper {{fixTop?'fixed':''}}">
+    <view class="tab-wrapper">
         <view class="tab-item {{activeIndex === 1 ? 'active' : ''}}" data-index="1" bindtap="switchTab">
             简介
         </view>
@@ -73,7 +72,32 @@
 
                 </view>
             </block>
-        </view>
+            <!-- 底部评论栏 -->
+            <view class="input-box">
+                <!-- 输入栏 -->
+                <view class="input-bar">
+                    <view class="comment-emoji" bindtap="emojiShowHide">
+                        <image src="../../images/emoji.png" />
+                    </view>
+                    <view class="comment-input">
+                        <input type="text" bindinput="commentInput" value="{{content}}" placeholder="快来发表你的评论吧~"/>
+                    </view>
+                    <view class="comment-btn" bindtap="submitComment">
+                        <image src="../../images/send.png" />
+                    </view>
+                </view>
+                <!-- 表情栏 -->
+                <view class="emoji-box {{isShow ? 'emoji-move-in' : 'emoji-move-out'}} {{isLoad ? 'no-emoji-move' : ''}}" >
+                    <scroll-view scroll-y="true" bindscroll="emojiScroll" style="height:200px">
+                        <block wx:for="{{emojis}}" wx:for-item="e">
+                            <view class="emoji-cell">
+                                <image class="touch-active" bindtap="emojiChoose" src="http://soupu.oss-cn-shanghai.aliyuncs.com/emoji/{{e.emoji}}.png" data-emoji="{{e.char}}" data-oxf="{{e.emoji}}"></image>
+                            </view>
+                        </block>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>    
     </view>
 
     <view class="operate-wrapper">
@@ -82,4 +106,3 @@
         </view>
     </view>
 </view>
-</scroll-view>
