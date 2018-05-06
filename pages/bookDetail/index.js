@@ -13,38 +13,40 @@ Page({
         },
         name:'',
         user: '',
+        avatar:'',
         detailInfo: {
             authorIntro: '',
             bookIntro: '',
         },
-        commentList: [
-            {
-                avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-                name: '呆姐呆',
-                comment: '买给我侄女李小曦,她非常喜欢~'
-            },
-            {
-                avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-                name: '呆姐呆',
-                comment: '买给我侄女李小曦,她非常喜欢~'
-            },
-            {
-                avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-                name: '呆姐呆',
-                comment: '买给我侄女李小曦,她非常喜欢~'
-            },
-            {
-                avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-                name: '呆姐呆',
-                comment: '买给我侄女李小曦,她非常喜欢~'
-            },
-            {
-                avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-                name: '呆姐呆',
-                comment: '买给我侄女李小曦,她非常喜欢~'
-            },
+        commentList: [],
+        // commentList: [
+        //     {
+        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
+        //         name: '呆姐呆',
+        //         comment: '买给我侄女李小曦,她非常喜欢~'
+        //     },
+        //     {
+        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
+        //         name: '呆姐呆',
+        //         comment: '买给我侄女李小曦,她非常喜欢~'
+        //     },
+        //     {
+        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
+        //         name: '呆姐呆',
+        //         comment: '买给我侄女李小曦,她非常喜欢~'
+        //     },
+        //     {
+        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
+        //         name: '呆姐呆',
+        //         comment: '买给我侄女李小曦,她非常喜欢~'
+        //     },
+        //     {
+        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
+        //         name: '呆姐呆',
+        //         comment: '买给我侄女李小曦,她非常喜欢~'
+        //     },
 
-        ],
+        // ],
         activeIndex: 1,
         likeStatus: 0,
         likeImg: '../../images/tobeliked.png',
@@ -78,14 +80,17 @@ Page({
         self.getBookInfo(name)
         //获取图书详细信息
         self.getBookDetail(name) 
+        self.getCommentList(name)
         wx.getUserInfo({
             success: function(res) {
                 let userInfo = res.userInfo
                 let nickName = userInfo.nickName
+                let avatarUrl = userInfo.avatarUrl
                 console.log(name, nickName)
                 self.getCollectStaus(name,nickName)
                 self.setData({
-                    user: nickName
+                    user: nickName,
+                    avatar:avatarUrl
                 })
             }
         }) 
@@ -113,14 +118,14 @@ Page({
             url = 'delete'       
             wx.showToast({
                 title: '已取消收藏',
-                icon: 'success',
+                icon: 'none',
                 duration: 2000
             })
         } else {  
             url = 'insert'  
             wx.showToast({
                 title: '已收藏',
-                icon: 'success',
+                icon: 'none',
                 duration: 2000
             })
         } 
@@ -232,9 +237,32 @@ Page({
             }
         })
     },
+    getCommentList(name) {
+        const self = this
+        wx.request({
+            url: API.COMMENT_LIST,
+            method:'get',
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
+            data: {
+                name: name
+            },
+            success(res) {
+                const data = res.data.data
+                self.setData({
+                    commentList: data
+                })
+            }
+        })
+    },
+    commentInput(event) {
+        this.setData({
+            content:event.detail.value
+        })
+    },
     emojiShowHide() {
         const self = this
-        console.log('show emoji')
         self.setData({
             isShow: !self.data.isShow,
             isLoad: false,
@@ -243,11 +271,54 @@ Page({
     emojiChoose(event) {
         const self = this
         const emoji = event.currentTarget.dataset.emoji
-        this.setData({
+        self.setData({
             content: self.data.content + emoji 
         })
     },
     submitComment() {
-        
+        const self = this
+        if(!self.data.content.trim()) {
+            wx.showToast({
+                title: '还未输入任何内容',
+                icon: 'none',
+                duration: 1000
+            })
+            return 
+        }
+        var commentData = {
+            name: self.data.name,
+            user: self.data.user,
+            userAvatar: self.data.avatar,
+            comment: self.data.content
+        }
+        wx.request({
+            url: API.BOOK_COMMENT,
+            method:'post',
+            header: {
+                'content-type':'application/x-www-form-urlencoded'
+            },
+            data: commentData,
+            success(res) {
+                if(res.data.result) {
+                    wx.showToast({
+                        title: '评论成功',
+                        icon: 'none',
+                        duration: 1000
+                    })
+                    self.getCommentList(self.data.name)
+                } else {
+                    wx.showToast({
+                        title: '评论失败, 请稍后再试',
+                        icon: 'none',
+                        duration: 1000
+                    })
+                }
+                self.setData({
+                    content: '',
+                    isShow: false,
+                    isLoad: true
+                })
+            }
+        })
     }
 })

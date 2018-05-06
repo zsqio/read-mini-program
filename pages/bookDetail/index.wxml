@@ -63,10 +63,10 @@
             <block wx:for="{{commentList}}">
                 <view class="comment-item">
                     <view class="item-avatar">
-                        <image src="{{item.avatar}}"/>
+                        <image src="{{item.userAvatar}}"/>
                     </view>
                     <view class="item-text">
-                        <view class="name">{{item.name}}</view>
+                        <view class="name">{{item.user}}</view>
                         <view class="comment">{{item.comment}}</view>
                     </view>
 
