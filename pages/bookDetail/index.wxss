@@ -145,6 +145,7 @@
 .item-text .comment {
   color: #666666;
   font-size: 28rpx;
+  margin-bottom: 10rpx;
 }
 .item-text .time {
   color: #666666;
