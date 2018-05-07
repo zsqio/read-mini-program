@@ -1,0 +1,35 @@
+.page-container {
+    background: #fff;
+}
+.wish-wrapper {
+    background: #efefef;
+    padding: 20rpx;
+    box-sizing: border-box;
+    margin-bottom: 20rpx;
+}
+
+.wish-item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    -webkit-border-radius: 8rpx;
+    -moz-border-radius: 8rpx;
+    border-radius: 8rpx;
+    margin-top: 20rpx; 
+    border-bottom: 1px solid #fff ;
+}
+.wish-item .item-label {
+    font-size: 32rpx;
+    color: #333;
+    padding-top: 20rpx;
+    box-sizing: border-box;
+}
+.wish-item .item-input {
+    flex: 1;
+    padding: 20rpx 10rpx ;
+    box-sizing: border-box;
+    font-size: 28rpx;
+}
+.btn-box {
+    margin-top: 20rpx;
+}

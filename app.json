@@ -8,7 +8,8 @@
     "pages/list/index",
     "pages/collect/index",
     "pages/userInfo/index",
-    "pages/wishs/index"
+    "pages/wishs/index",
+    "pages/newWish/index"
   ],
   "window": {
     "backgroundTextStyle": "bold",

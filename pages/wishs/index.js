@@ -4,5 +4,10 @@ Page({
     },
     onLoad() {
         
+    },
+    goNewWish() {
+        wx.navigateTo({
+            url: '../newWish/index'
+        })
     }
 })

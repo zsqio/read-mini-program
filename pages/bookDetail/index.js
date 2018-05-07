@@ -3,51 +3,11 @@ var API = require('../../utils/api.js');
 var Util = require('../../utils/util.js');
 Page({
     data: {
-        baseInfo: {
-            name: '',
-            engName: '',
-            cover: '',
-            author: '',
-            piblisher: '',
-            isbn: '',
-            tag: []
-        },
         name:'',
         user: '',
         avatar:'',
-        detailInfo: {
-            authorIntro: '',
-            bookIntro: '',
-        },
+        detailInfo: {},
         commentList: [],
-        // commentList: [
-        //     {
-        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-        //         name: '呆姐呆',
-        //         comment: '买给我侄女李小曦,她非常喜欢~'
-        //     },
-        //     {
-        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-        //         name: '呆姐呆',
-        //         comment: '买给我侄女李小曦,她非常喜欢~'
-        //     },
-        //     {
-        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-        //         name: '呆姐呆',
-        //         comment: '买给我侄女李小曦,她非常喜欢~'
-        //     },
-        //     {
-        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-        //         name: '呆姐呆',
-        //         comment: '买给我侄女李小曦,她非常喜欢~'
-        //     },
-        //     {
-        //         avatar: 'https://img3.doubanio.com/icon/u3048252-14.jpg',
-        //         name: '呆姐呆',
-        //         comment: '买给我侄女李小曦,她非常喜欢~'
-        //     },
-
-        // ],
         activeIndex: 1,
         likeStatus: 0,
         likeImg: '../../images/tobeliked.png',
@@ -78,9 +38,7 @@ Page({
             name: name
         })
         //获取图书基本信息
-        self.getBookInfo(name)
-        //获取图书详细信息
-        self.getBookDetail(name) 
+        self.getBookInfo(name) 
         self.getCommentList(name)
         wx.getUserInfo({
             success: function(res) {
@@ -130,7 +88,7 @@ Page({
                 duration: 2000
             })
         } 
-        self.collect(url,self.data.name, self.data.user, self.data.baseInfo.cover) 
+        self.collect(url,self.data.name, self.data.user, self.data.detailInfo.cover) 
     },
 
     //收藏或者取消收藏图书
@@ -149,31 +107,6 @@ Page({
             },
             success(res) {  
                 self.getCollectStaus(self.data.name, self.data.user)
-            }
-        })
-    },
-
-    //获取图书的作者以及内容简介
-    getBookDetail(name) {
-        let self = this
-        wx.request({
-            url: API.BOOK_DETAIL,
-            method:'get',
-            header: {
-                'content-type':'application/x-www-form-urlencoded'
-            },
-            data: {
-                name: name
-            },
-            success(res) {
-                if(res.data.data.length) {
-                    const data = res.data.data
-                    self.setData({
-                        detailInfo: data[0]
-                    })
-                } else {
-
-                }               
             }
         })
     },
@@ -198,7 +131,7 @@ Page({
                 if(res.data.data.length) {
                     const data = res.data.data
                     self.setData({
-                        baseInfo: data[0]
+                        detailInfo: data[0]
                     })
                 } else {
 
@@ -324,6 +257,14 @@ Page({
                     isLoad: true
                 })
             }
+        })
+    },
+
+    //单击标签跳转到指定的标签列表页
+    goTagList(event) {
+        const tag = event.currentTarget.dataset.tag
+        wx.navigateTo({
+          url:'../list/index?tag='+tag
         })
     }
 })

@@ -2,30 +2,30 @@
     <!-- 头部封面 -->
     <view class="cover-wrapper">
         <view class="cover">
-            <image src="{{baseInfo.cover}}"/>
+            <image src="{{detailInfo.cover}}"/>
         </view>
     </view>
 
     <!-- 书籍解说 -->
     <view class="intro-wrapper">
         <view class="intro-left">
-            <view class="name">{{baseInfo.name}}</view>
+            <view class="name">{{detailInfo.name}}</view>
             <view class="author">
                 <text class="label">作者:</text>
-                <text class="value">{{baseInfo.author}}</text>
+                <text class="value">{{detailInfo.author}}</text>
             </view>
             <view class="publisher">
                 <text class="label">出版社:</text>
-                <text class="value">{{baseInfo.publisher}}</text>
+                <text class="value">{{detailInfo.publisher}}</text>
             </view>
             <view class="isbn">
                 <text class="label">ISBN:</text>
-                <text class="value">{{baseInfo.isbn}}</text>
+                <text class="value">{{detailInfo.isbn}}</text>
             </view>
         </view>
         <view class="intro-right">
             <view class="title">总体评分</view>
-            <view class="score">{{baseInfo.score}}分</view>
+            <view class="score">{{detailInfo.score}}分</view>
         </view>     
 
     </view>
@@ -45,8 +45,8 @@
         <view class="book-content {{activeIndex === 1 ? 'show' : 'hidden'}}">
             <view class="book-tags">
                 <view class="title">所属分类:</view>
-                <block wx:for="{{baseInfo.tag}}">
-                    <text class="tag">{{item}}</text>
+                <block wx:for="{{detailInfo.tag}}">
+                    <text class="tag" data-tag="{{item}}" bindtap="goTagList">{{item}}</text>
                 </block>
             </view>
             <view class="author-intro">

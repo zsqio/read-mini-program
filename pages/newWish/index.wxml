@@ -1,0 +1,25 @@
+<view class="page-container">
+    <view class="wish-wrapper">
+        <view class="wish-item">
+            <view class="item-input">开启上架通知</view>
+            <view class="item-switch">
+                <switch bindchange="handleChange"></switch>
+            </view>
+        </view>
+        <view class="wish-item">
+            <view class="item-label">书名</view>
+            <view class="item-input">
+                <input type="text" placeholder="请输入书名" value="{{name}}" bindinput="nameInput"/>
+            </view>
+        </view>
+        <view class="wish-item">
+            <view class="item-label">作者</view>
+            <view class="item-input">
+                <input type="text" placeholder="请输入作者" value="{{author}}" bindinput="authorInput"/>
+            </view>
+        </view>
+        <view class="btn-box">
+        <button type="primary" bindtap="saveWish">保存</button>
+    </view> 
+    </view>
+</view>

@@ -5,6 +5,6 @@
         <view class="inform-text">快来添加你的心愿单哦~</view>
     </view>
     <view class="btn-box">
-        <button type="primary">新增心愿</button>
+        <button type="primary" bindtap="goNewWish">新增心愿</button>
     </view> 
 </view>
