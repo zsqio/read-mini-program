@@ -8,7 +8,7 @@ Page({
             title: "个人信息"
         }) 
         wx.getUserInfo({
-            success: function(res) {
+            success(res) {
                 var userInfo = res.userInfo
                 console.log(userInfo)
                 if(userInfo.gender === 0) {

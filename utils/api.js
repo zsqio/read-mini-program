@@ -8,7 +8,10 @@ var API = {
     BOOK_COUNT: 'http://192.168.1.104:9999/book/count',
     BOOK_SEARCH: 'http://192.168.1.104:9999/book/search',
     BOOK_COMMENT: 'http://192.168.1.104:9999/comment/add',
-    COMMENT_LIST: 'http://192.168.1.104:9999/comment/list'
+    COMMENT_LIST: 'http://192.168.1.104:9999/comment/list',
+    NEW_WISHES: 'http://192.168.1.104:9999/wish/add',
+    WISH_LIST: 'http://192.168.1.104:9999/wish/mine',
+    WISH_DELETE: 'http://192.168.1.104:9999/wish/delete'
 }
 
 module.exports = API

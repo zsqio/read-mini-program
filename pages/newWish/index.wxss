@@ -19,14 +19,14 @@
     border-bottom: 1px solid #fff ;
 }
 .wish-item .item-label {
-    font-size: 32rpx;
+    font-size: 28rpx;
     color: #333;
     padding-top: 20rpx;
     box-sizing: border-box;
 }
 .wish-item .item-input {
     flex: 1;
-    padding: 20rpx 10rpx ;
+    padding: 20rpx 20rpx ;
     box-sizing: border-box;
     font-size: 28rpx;
 }

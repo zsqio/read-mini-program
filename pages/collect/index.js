@@ -3,7 +3,8 @@ var API = require('../../utils/api.js');
 var app = getApp()
 Page({
   data:{
-      collectList: []
+      collectList: [],
+      user: ''
   },
   onLoad(options){
       let self = this
@@ -15,8 +16,14 @@ Page({
                 let userInfo = res.userInfo
                 let nickName = userInfo.nickName
                 self.getMyCollect(nickName)
+                self.setData({
+                    user: nickName
+                })
             }
         })   
+  },
+  onShow() {
+    this.getMyCollect(this.data.user)
   },
   getMyCollect(user) {
       let self = this

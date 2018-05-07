@@ -1,6 +1,7 @@
 .page-container {
     padding: 40rpx;
     box-sizing: border-box;
+    background: #efefef;
 }
 .tags-box{
     padding: 0 0 20rpx;

@@ -1,10 +1,4 @@
 
-/**app.wxss**/
-.page-container {
-  min-height: 100%;
-  background: #efefef;
-}
-
 /**覆盖image自带宽高，让其自适应显示**/
 image {
   width: 100%;

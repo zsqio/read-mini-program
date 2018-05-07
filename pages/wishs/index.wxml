@@ -1,8 +1,19 @@
 <view class="page-container">
-    <view class="inform-box">
-        <view class="inform-logo">
+    <view class="inform-box {{hasData? 'hidden': 'show'}}">
+        <view class="inform-logo ">
             <image src="{{informImg}}" /></view>
         <view class="inform-text">快来添加你的心愿单哦~</view>
+    </view>
+    <view class="wish-list">
+        <block wx:for="{{wishList}}">
+            <view class="list-item">
+                <view class="item-info">
+                    <view class="item-name">{{item.name}}</view>
+                    <view class="item-status">{{item.status}}</view>
+                </view>   
+                <view class="item-operate" data-name="{{item.name}}" bindtap="deleteWish">删除</view>
+            </view>
+        </block>
     </view>
     <view class="btn-box">
         <button type="primary" bindtap="goNewWish">新增心愿</button>

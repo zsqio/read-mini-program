@@ -23,3 +23,34 @@
     padding: 0 40rpx;
     box-sizing: border-box;
 }
+
+.wish-list {
+    padding: 20rpx;
+}
+
+.list-item {
+    -webkit-border-radius: 16rpx;
+    -moz-border-radius: 16rpx;
+    border-radius: 16rpx;
+    display: flex;
+    background: #efefef;
+    padding: 20rpx 10rpx;
+    margin-bottom: 20rpx;
+}
+.list-item .item-info {
+    flex: 1;
+}
+.list-item .item-name {
+    font-size: 32rpx;
+    color: #333;
+    line-height: 1.5;
+}
+.list-item .item-status {
+    font-size: 24rpx;
+    color: #f00;
+}
+
+.list-item .item-operate {
+    color: #666;
+    font-size: 28rpx;
+}
